@@ -1,0 +1,17 @@
+#profile {
+    min-height: 100vh;
+    background-color: #666;
+}
+.pr
+{
+    float: right;
+}
+.note {
+    min-height: 200px;
+    width: 200px;
+    background-color: #ccf;
+}
+
+i {
+    cursor: pointer;
+}

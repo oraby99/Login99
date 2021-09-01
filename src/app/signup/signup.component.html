@@ -1,0 +1,42 @@
+<section id="signup">
+     <div class="container">
+        <form [formGroup]="signUp" (ngSubmit)="signUp.valid&&FormData()" >
+            <div class="form w-50 m-auto">
+                <div class="row">
+                    <div class="col-md-6">
+                        <input [class.is-valid]="signUp.controls.first_name.status=='VALID'" formControlName="first_name" type="text" placeholder="Enter First Name" class="form-control">
+                        <div *ngIf="signUp.controls.first_name.errors &&signUp.controls.first_name.touched  " class="alert alert-danger" role="alert">
+                            First Name is required
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <input [class.is-valid]="signUp.controls.last_name.status=='VALID'" formControlName="last_name" type="text" placeholder="Enter Last Name" class="form-control">
+                        <div *ngIf="signUp.controls.last_name.errors &&signUp.controls.last_name.touched  " class="alert alert-danger" role="alert">
+                            Last Name is required
+                        </div>
+                    </div>
+                </div>
+                <input [class.is-valid]="signUp.controls.email.status=='VALID'" formControlName="email" type="email" placeholder="Enter Email" class="form-control my-3">
+                <div *ngIf="signUp.controls.email.errors &&signUp.controls.email.touched  " class="alert alert-danger" role="alert">
+                    Email is required
+                </div>
+                <input [class.is-valid]="signUp.controls.age.status=='VALID'" formControlName="age" type="number" placeholder="Enter You Age" class="form-control">
+                <div *ngIf="signUp.controls.age.errors &&signUp.controls.age.touched  " class="alert alert-danger" role="alert">
+                    Age is required
+                </div>
+                <input [class.is-valid]="signUp.controls.password.status=='VALID'" formControlName="password" type="password" placeholder="Enter password" class="form-control my-3">
+                <div *ngIf="signUp.controls.password.errors &&signUp.controls.password.touched  " class="alert alert-danger" role="alert">
+                    Password is required
+                </div><small class="text-muted">must include lower and uper case character and symbol</small>
+                <!-- <button type="submit" class="btn btn-info w-100">Sign Up</button> -->
+                <button [disabled]="signUp.invalid" [ngStyle]="signUp.invalid? isStyleValid:isStyleInvalid" class="btn btn-info w-100"><span *ngIf="!isClicked">Sign Up</span> <span *ngIf="isClicked">Wating....</span></button>
+               <div *ngIf="isSuccess" class="alert alert-success text-center" role="alert">
+                    {{ResponseMessage}}
+                </div>
+                <div *ngIf="isUniuqeEmail" class="alert alert-danger text-center" role="alert">
+                    {{isUniuqeEmailMessage}}
+                </div> 
+            </div>
+        </form>
+    </div>
+</section>

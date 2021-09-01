@@ -1,0 +1,46 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#"><i class="far fa-sticky-note"></i> Notes</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mb-2 mb-lg-0 nv ">
+          <li *ngIf="!_AuthService.isLoggedIn()" class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Sign-In</a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" routerLink="/signin"> Sign In</a></li>
+              <li><a class="dropdown-item" routerLink="/signup"> Sign Up</a></li>
+            </ul>
+          </li>
+          <li *ngIf="_AuthService.isLoggedIn()" class="nav-item dropdown">
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                Logout
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" (click)="logout()">Log out</a></li>
+              </ul>
+            </div>
+            <!-- <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li>
+                <a class="dropdown-item" (click)="logout()">Log out</a>
+              </li>
+              
+            </ul> -->
+            <!-- <div class="as">
+              <a class="dropdown-item" (click)="logout()">Logout</a>
+          </div> -->
+          <!-- <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+              Logout
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li><a class="dropdown-item" (click)="logout()">Log out</a></li>
+            </ul>
+          </div> -->
+        </li>
+        </ul>
+      </div>
+    </div>
+  </nav>

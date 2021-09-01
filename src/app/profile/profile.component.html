@@ -1,0 +1,115 @@
+<section class="pt-5" id="profile">
+    <div class="container pt-4">
+
+        <div class="row">
+            <div class="col-md-12">
+                <button class="btn btn-info float-right pr" data-toggle="modal" data-target="#AddNote" >Add Note</button>
+            </div>
+           <div class="col-md-3">
+                <div class="note text-center p-3">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <i class="fas fa-ellipsis-v float-right p-2" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+                            <div class="dropdown">
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" data-toggle="modal" data-target="#EditNote" href="#"><span>Edit</span> <i class="fas fa-pen-square text-info float-right"></i></a>
+                                    <a class="dropdown-item" data-toggle="modal" data-target="#DeleteNote" href="#"><span>Delete</span> <i class="fas fa-trash text-danger float-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h2> My Note</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo, officiis.</p>
+                </div>
+
+            </div> 
+        </div>
+    </div>
+</section>
+
+<div class="modal fade" id="AddNote" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Add Note</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <input type="text" class="form-control my-3" placeholder="Title">
+                        </div>
+                        <div class="col-md-12">
+                            <textarea placeholder="Add Description" class="form-control" cols="30" rows="10"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-info">Add Note</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 
+<div class="modal fade" id="EditNote" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Edit Note</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <input type="text" class="form-control my-3" placeholder="Title">
+                        </div>
+                        <div class="col-md-12">
+                            <textarea placeholder="Add Description" class="form-control" cols="30" rows="10"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-info">Save</button>
+
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="DeleteNote" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Are you sure? </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+            </div>
+            <div class="modal-body">
+                <div class="container text-center">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p class="text-info">Do you really want to delete ?<br> process cannot be undone</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger">Delete</button>
+
+                <button type="button" class="btn btn-info" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+ -->
